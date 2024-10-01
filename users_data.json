@@ -40,5 +40,23 @@
                 "result_text": "Robert"
             }
         ]
+    },
+    "Example": {
+        "password": "@Sample123",
+        "attempts": 0,
+        "log": [
+            {
+                "action": "Encrypt",
+                "cipher_type": "Vigen\u00e8re",
+                "original_text": "CodingSkills",
+                "result_text": "VhwbgzLdbeel"
+            },
+            {
+                "action": "Decrypt",
+                "cipher_type": "Vigen\u00e8re",
+                "original_text": "VhwbgzLdbeel",
+                "result_text": "CodingSkills"
+            }
+        ]
     }
 }
