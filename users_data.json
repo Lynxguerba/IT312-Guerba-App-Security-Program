@@ -5,15 +5,39 @@
         "log": [
             {
                 "action": "Encrypt",
-                "cipher_type": "Atbash",
-                "original_text": "dinno",
-                "result_text": "wrmml"
+                "cipher_type": "Caesar",
+                "original_text": "Bimax",
+                "result_text": "Fmqeb"
+            },
+            {
+                "action": "Decrypt",
+                "cipher_type": "Caesar",
+                "original_text": "Fmqeb",
+                "result_text": "Bimax"
+            }
+        ]
+    },
+    "Dannicakes04": {
+        "password": "Carwana$2004",
+        "attempts": 1,
+        "log": [
+            {
+                "action": "Encrypt",
+                "cipher_type": "Vigen\u00e8re",
+                "original_text": "Robert",
+                "result_text": "Ifsvik"
             },
             {
                 "action": "Encrypt",
-                "cipher_type": "Atbash",
-                "original_text": "wrmml",
-                "result_text": "dinno"
+                "cipher_type": "Vigen\u00e8re",
+                "original_text": "Robert",
+                "result_text": "Ifsvik"
+            },
+            {
+                "action": "Decrypt",
+                "cipher_type": "Vigen\u00e8re",
+                "original_text": "Ifsvik",
+                "result_text": "Robert"
             }
         ]
     }

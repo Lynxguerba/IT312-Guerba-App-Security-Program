@@ -61,6 +61,8 @@ def login_user(users_db):
         user_data = users_db[username]
         if user_data['attempts'] >= attempts_limit:
             print("Account blocked after 3 wrong attempts.")
+            if restore_account(users_db, username):
+                return username
             return None
 
         password = input("Enter password: ")
@@ -74,6 +76,20 @@ def login_user(users_db):
             if user_data['attempts'] >= attempts_limit:
                 print("Account blocked after 3 wrong attempts.")
                 return None
+
+def restore_account(users_db, username):
+    print("Would you like to restore your blocked account? (y/n)")
+    if input().lower() == 'y':
+        password = input("Enter your password to restore your account: ")
+        if password == users_db[username]['password']:
+            users_db[username]['attempts'] = 0  # Reset attempts
+            save_users_data(users_db)
+            print("Account restored successfully!")
+            return True
+        else:
+            print("Incorrect password. Unable to restore account.")
+            return False
+    return False
 
 # Cipher Functions
 def atbash_cipher(text):
@@ -133,7 +149,7 @@ def cipher_menu(users_db, username):
         print("Encrypted Text (Atbash):", encrypted)
         log_activity(users_db, username, "Encrypt", text, encrypted, "Atbash")
     elif choice == '2':
-        shift = int(input("Enter shift value for Caesar Cipher: "))
+        shift = int(input("Enter shift value for Caesar Cipher (Number Only): "))
         encrypted = caesar_cipher(text, shift)
         print("Encrypted Text (Caesar):", encrypted)
         log_activity(users_db, username, "Encrypt", text, encrypted, "Caesar")
