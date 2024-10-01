@@ -1,0 +1,20 @@
+{
+    "DinnoG": {
+        "password": "Guerba1215$",
+        "attempts": 0,
+        "log": [
+            {
+                "action": "Encrypt",
+                "cipher_type": "Atbash",
+                "original_text": "dinno",
+                "result_text": "wrmml"
+            },
+            {
+                "action": "Encrypt",
+                "cipher_type": "Atbash",
+                "original_text": "wrmml",
+                "result_text": "dinno"
+            }
+        ]
+    }
+}
