@@ -6,14 +6,14 @@
             {
                 "action": "Encrypt",
                 "cipher_type": "Caesar",
-                "original_text": "Bimax",
-                "result_text": "Fmqeb"
+                "original_text": "Zoren",
+                "result_text": "Odgtc"
             },
             {
                 "action": "Decrypt",
                 "cipher_type": "Caesar",
-                "original_text": "Fmqeb",
-                "result_text": "Bimax"
+                "original_text": "Odgtc",
+                "result_text": "Zoren"
             }
         ]
     },
